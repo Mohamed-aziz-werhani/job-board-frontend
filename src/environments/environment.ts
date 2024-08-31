@@ -4,9 +4,9 @@ export const environment = {
     api_version: 'v1',
     currentVersion: '1.0.0',
     auth0: {
-        domain: 'dev-blucf6ji.us.auth0.com',
-        clientId: 'rdHs08kGjhvFT71uWvSWSQUrTtknW1ZG',
-        audience: 'https://dev-blucf6ji.us.auth0.com/api/v2/',
+        domain: 'https://dev-axjamzboe5y1qgar.eu.auth0.com',
+        clientId: '7Xj5cwOzlWlvvgKcMqPKRZ3SpQzhd34P',
+        audience: 'https://dev-axjamzboe5y1qgar.eu.auth0.com/api/v2/',
         redirectUri: 'http://localhost:4200',
     }
 };
@@ -14,7 +14,13 @@ export const environment = {
 
 // export const environment = {
 //     production: true,
-//     base_api: 'https://king-prawn-app-zfqp8.ondigitalocean.app',
+//     base_api: 'http://localhost:3000',
 //     api_version: 'v1',
 //     currentVersion: '1.0.0',
+//     auth0: {
+//         domain: 'https://dev-axjamzboe5y1qgar.eu.auth0.com',
+//         clientId: '7Xj5cwOzlWlvvgKcMqPKRZ3SpQzhd34P',
+//         audience: 'https://dev-axjamzboe5y1qgar.eu.auth0.com/api/v2/',
+//         redirectUri: 'http://localhost:4200',
+//     }
 // };
