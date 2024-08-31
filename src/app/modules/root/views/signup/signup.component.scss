@@ -1,0 +1,58 @@
+/* Making sure all content is centered both vertically and horizontally */
+.container {
+    width: 100vw !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-radius: .5rem;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.details {
+    grid-column: span 2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0px;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    user-select: none;
+}
+
+a {
+    grid-column: span 2;
+    text-decoration: none;
+}
+
+button {
+    justify-content: center;
+    grid-column: span 2;
+}
+
+::ng-deep.mat-mdc-form-field-subscript-wrapper {
+    display: none !important;
+    ;
+}
+
+.signup-link {
+    text-align: center;
+    grid-column: span 2;
+}
+
+user.username {
+    padding-left: 10px;
+}

@@ -1,0 +1,15 @@
+<h1>List of available jobs</h1>
+<hr>
+<ng-container *ngIf="jobs.length !== 0 else noData">
+    <div class="jobsGrid">
+        <ng-container *ngFor="let item of jobs">
+            <app-job-card [job]="item ?? {}" (delete)="deleteJob(item?.id ?? '')"></app-job-card>
+        </ng-container>
+    </div>
+</ng-container>
+
+<ng-template #noData>
+    <div class="noData">
+        <img src="/assets/images/no_data.png" alt="">
+    </div>
+</ng-template>

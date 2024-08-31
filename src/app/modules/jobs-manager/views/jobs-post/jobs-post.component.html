@@ -1,0 +1,29 @@
+<ng-container *ngIf="localActionMode === 'edit'">
+    <app-job-form></app-job-form>
+</ng-container>
+
+<ng-container *ngIf="localActionMode === 'view'">
+    <div class="jobDetails">
+        <div class="jobHeader">
+            <div>
+                <h1>{{job.title}}</h1>
+                <a href="#">
+                    {{job.company?.name}}
+                </a>
+            </div>
+            <button mat-flat-button color="primary" (click)="onApply()">Apply Now</button>
+        </div>
+        <p>{{job.description}}</p>
+    </div>
+
+    <div class="jobApplicationsSection">
+        <mat-divider></mat-divider>
+        <app-job-applications></app-job-applications>
+    </div>
+
+    <ng-container *ngIf="localActionMode === 'view'">
+        <button mat-fab color="primary" aria-label="add new job" class="toggleEditModeButton" matTooltip="Add new job" (click)="switchActionMode()">
+            <mat-icon>edit</mat-icon>
+        </button>
+    </ng-container>
+</ng-container>

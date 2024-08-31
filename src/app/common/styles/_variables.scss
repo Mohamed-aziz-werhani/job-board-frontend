@@ -1,0 +1,26 @@
+/*
+
+  This is the base variables file.
+  This is used to define the base variables for the project.
+  including colors, fonts, sizes, etc.
+
+*/
+
+:root {
+  // SIZES
+  --navbar-height: 70px; // main top bar height
+  --sidebar-width: 240px; // main top bar height
+  --max-width: 1000px; // maw width the content would take within the display area
+
+
+  // COLORS
+  --primary-color: #FAFAFA; // usually the background
+  --accent-color: #12234F;
+  --secondary-color: #ffffff;
+
+  // MAIN COLOR PALETTE
+  --dark-0: #161E2C;
+  --blue-0: #2563EB;
+  --blue-6: #EFF7FE;
+  --white-0: #F8FAFA;
+}

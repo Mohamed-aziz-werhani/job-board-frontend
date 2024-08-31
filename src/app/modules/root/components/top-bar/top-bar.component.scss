@@ -1,0 +1,43 @@
+.mainNavbar {
+    height: var(--navbar-height);
+    width: 100%;
+    background-color: var(--primary-color);
+
+    color: black;
+
+    display: flex;
+    justify-content: center;
+}
+
+.brand {
+    font-size: 3rem;
+    cursor: pointer;
+
+    &::selection {
+        background: transparent;
+    }
+}
+
+.box-with-text {
+    background-image: -webkit-linear-gradient(rgb(3, 3, 3) 50%, white 50%);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 100% 50px;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: stripes 0.7s linear infinite;
+    animation: stripes 0.7s linear infinite;
+}
+
+@-webkit-keyframes stripes {
+    100% {
+        background-position: 0 -50px;
+    }
+}
+
+@keyframes stripes {
+    100% {
+        background-position: 0 -50px;
+    }
+}

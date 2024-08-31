@@ -1,0 +1,52 @@
+@import './app/common/styles/variables';
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+// GLOBAL RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  // width: auto;
+  font-family: 'Poppins', sans-serif;
+  background: #F2F2F2;
+  margin: 0;
+}
+
+// shared styling for the different forms used in this application
+// as they all follow the same structure
+.sharedFormLayout {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  gap: 5px;
+  padding: 20px;
+
+  .file-has-name-is-boxed {
+    grid-column: span 2;
+  }
+
+  .jobDescription {
+    grid-column: span 2;
+  }
+
+  .formAction {
+    grid-column: span 2;
+
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}

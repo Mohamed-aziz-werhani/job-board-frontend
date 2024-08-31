@@ -1,0 +1,11 @@
+<div class="companyFormContainer">
+    <h1>New Company</h1>
+    <mat-form-field appearance="outline">
+        <mat-label>Name (unique)</mat-label>
+        <input matInput placeholder="Ex. MAAK-CORP" #companyName>
+    </mat-form-field>
+    <button mat-stroked-button (click)="onNoClick()">
+        <mat-icon>save</mat-icon>
+        Save
+    </button>
+</div>

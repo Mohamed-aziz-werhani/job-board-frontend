@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+.activation-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 50px; 
+}
+
+.message-box {
+    justify-content: center;
+    background-color: #bbc7cb; 
+    padding: 30px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    text-align: center; 
+    max-width: 500px; 
+    width: 100%; 
+    color: #333333; 
+}
+
+.message-box h2 {
+    margin-top: 0; 
+    color:#68849f; 
+    font-size: 1.8em; 
+}
+
+.message-box p {
+    font-size: 1.1em; 
+    line-height: 1.6; }
+
+.message-box strong {
+    color:#4874a5; 
+}
+
+@media (max-width:600px) {
+    .message-box {
+        padding: 20px;
+     }
+
+    .message-box h2 {
+        font-size: 1.5em; }
+
+    .message-box p {
+        font-size: 1em; 
+    }
+}

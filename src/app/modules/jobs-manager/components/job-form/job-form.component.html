@@ -1,0 +1,36 @@
+<h1>Job Post Details</h1>
+<hr>
+<form [formGroup]="jobMainForm">
+    <!-- JOB TITLE -->
+    <mat-form-field appearance="outline">
+        <mat-label>Job Title</mat-label>
+        <input matInput formControlName="title">
+        <mat-error *ngIf="jobMainForm.get('title')?.hasError('required')">Job title is required!</mat-error>
+    </mat-form-field>
+
+    <!-- COMPANY -->
+    <mat-form-field appearance="outline">
+        <mat-label>Company</mat-label>
+        <mat-select formControlName="company">
+            <ng-container *ngFor="let company of companies_list">
+                <mat-option [value]="company?.id">{{company?.name}}</mat-option>
+            </ng-container>
+            <mat-option clickable (click)="onCompanyAdd()">
+                <mat-icon>add</mat-icon>
+                Add Company
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="jobMainForm.get('company')?.hasError('required')">Host company is required!</mat-error>
+    </mat-form-field>
+
+    <!-- JOB DESRIPTION -->
+    <mat-form-field appearance="outline" class="jobDescription">
+        <mat-label>Job Description</mat-label>
+        <textarea matInput placeholder="Front End Developer needed for this position" formControlName="description"></textarea>
+        <mat-error *ngIf="jobMainForm.get('description')?.hasError('required')">Job description is required!</mat-error>
+    </mat-form-field>
+
+    <div class="formAction">
+        <button mat-stroked-button (click)="onSave()" [disabled]="!jobMainForm.valid">Save Job</button>
+    </div>
+</form>

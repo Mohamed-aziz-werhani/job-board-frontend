@@ -1,0 +1,28 @@
+<main class="jobApplications">
+    <h1>Available applications for ths job</h1>
+
+    <div class="availableApplications">
+        <ng-container *ngIf="(applications$ | async) as applications">
+            <ng-container *ngIf="applications.data.length > 0; else noApplications">
+                <ng-container *ngFor="let item of applications.data.reverse(); let i = index">
+                    <mat-card class="applicationCard">
+                        <mat-card-title>
+                            Application #{{ i + 1 }}
+                        </mat-card-title>
+                        <mat-card-content>
+                            <strong>{{item.applicant_name}}</strong>
+                            <p>{{item.applicant_email}}</p>
+                            <p>{{item.application_text}}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+
+    <ng-template #noApplications>
+        <div class="noData">
+            <img src="/assets/images/no_data.png" alt="">
+        </div>
+    </ng-template>
+</main>

@@ -1,0 +1,21 @@
+<div class="jobCard" (click)="navigate(job, $event)" matBadge="{{job.applications?.length}}">
+    <div class="cardHeader">
+        <div class="headerBriefing">
+            <h1>{{job.title}}</h1>
+            <a href="#">{{job.company?.name}}</a>
+        </div>
+
+        <div class="headerActions" [attr.data-source]="'menu'">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="triggerDelete(job.id ?? '')">
+                    <mat-icon>delete</mat-icon>
+                    Delete job
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+    <p>{{job.description}}</p>
+</div>

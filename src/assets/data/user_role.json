@@ -1,0 +1,14 @@
+[
+    {
+        "id":"1",
+        "label":"recruiter"
+    },
+    {
+        "id":"2",
+        "label":"job_seeker"
+    },
+    {
+        "id":"3",
+        "label":"ceo"
+    }
+]
