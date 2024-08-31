@@ -1,45 +1,26 @@
 <h1>Application Form</h1>
 <hr>
 <form [formGroup]="applicationMainForm">
-    <!-- ** name INPUT **  -->
+
     <mat-form-field appearance="outline">
         <mat-label>Your name</mat-label>
         <input matInput formControlName="applicant_name">
-        <mat-error *ngIf="applicationMainForm.get('applicant_name')?.hasError('required')">Please fill out your
-            name</mat-error>
+        <mat-error *ngIf="applicationMainForm.get('applicant_name')?.hasError('required')">Please fill out your name</mat-error>
     </mat-form-field>
-    <!-- ** Email INPUT **  -->
+
     <mat-form-field appearance="outline">
         <mat-label>Your E-mail</mat-label>
         <input matInput formControlName="applicant_email">
-        <mat-error *ngIf="applicationMainForm.get('applicant_email')?.hasError('required')">Please fill out your
-            E-mail</mat-error>
+        <mat-error *ngIf="applicationMainForm.get('applicant_email')?.hasError('required')">Please fill out your E-mail</mat-error>
     </mat-form-field>
-
 
     <mat-form-field appearance="outline" class="jobDescription">
         <mat-label>Your cover letter</mat-label>
         <textarea matInput placeholder="I would like to apply for this position..." formControlName="application_text"></textarea>
-        <mat-error *ngIf="applicationMainForm.get('applicant_text')?.hasError('required')">Application text is
-            required!</mat-error>
+        <mat-error *ngIf="applicationMainForm.get('applicant_text')?.hasError('required')">Application text is required!</mat-error>
     </mat-form-field>
 
-    <!-- ** CV INPUT **  -->
-    <label>Upload Your CV *</label>
-    <div class="file-has-name-is-boxed">
-        <label class="file-label">
-            <input class="file-input" type="file" accept="pdf" name="resume" hidden (change)="onFileSelected($event)">
-            <span class="file-cta">
-                <span class="file-icon">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                </span>
-
-            </span>
-            <span class="file-name"> {{ fileName }}</span>
-        </label>
-    </div>
-
     <div class="formAction">
-        <button mat-stroked-button color="primary" (click)="onSave()" [disabled]="!applicationMainForm.valid">Save</button>
+        <button mat-stroked-button (click)="onSave()" [disabled]="!applicationMainForm.valid">Save</button>
     </div>
 </form>

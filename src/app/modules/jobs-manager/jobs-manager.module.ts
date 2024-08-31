@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompanyFormComponent } from './components/company-form/company-form.component';
 import { JobApplicationsComponent } from './components/job-applications/job-applications.component';
 
-
 /**
  * This module is responsible for managing jobs.
  * It handles 3 main views for the 'jobs' route
@@ -22,10 +21,6 @@ const routes: Routes = [
   {
     path: '',
     component: JobsIndexComponent
-  },
-  {
-    path: 'job-card/:id',
-    component: JobCardComponent
   },
   {
     path: APPLICATION_ROUTES.jobs.nested.post,
@@ -45,7 +40,7 @@ const routes: Routes = [
     JobCardComponent,
     JobFormComponent,
     CompanyFormComponent,
-    JobApplicationsComponent,
+    JobApplicationsComponent
   ],
   imports: [
     CommonModule,

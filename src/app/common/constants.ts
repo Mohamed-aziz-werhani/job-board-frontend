@@ -33,11 +33,3 @@ export const SNACK_MESSAGES = {
     success: (record: string, action: string) => `${record} has been ${action} successfully`,
     error: 'Something went wrong',
 }
-
-export const PASSWORD_PARAMS = {
-    lower: 'abcdefghijklmnopqrstuvwxyz',
-    upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
-    numeric: '0123456789',
-    symbols: '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~',
-    length: 12,
-};

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -33,20 +32,13 @@ export class ApplicationFormComponent implements OnInit {
     private readonly mailService: MailesService,
     private _snackBar: MatSnackBar,
     private readonly router: Router,
-    private http: HttpClient
   ) { }
-  fileName: string = 'No file selected';
+
   ngOnInit(): void {
 
     this.currentJobId = this.cuerrentRoute.snapshot.params['id'];
 
     this.createForm();
-  }
-  onFileSelected(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.fileName = input.files[0].name;
-    }
   }
 
   createForm() {

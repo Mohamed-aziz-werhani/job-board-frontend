@@ -142,7 +142,7 @@ export class JobFormComponent implements OnInit {
           this._snackBar.open(SNACK_MESSAGES.success('Job', 'created'), 'close');
           this.globalStore.update({ localActionMode: 'view' });
           this.jobStore.update({ ...response.data });
-          this.router.navigate(['/jobs']); 
+          this.router.navigate([`/jobs/${response.data.id}`]);
         },
         error: (error) => {
           console.error(error);
